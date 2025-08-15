@@ -335,15 +335,6 @@ var _ = Describe("Test Work Generator Controller", func() {
 					ObjectMeta: metav1.ObjectMeta{
 						Name:      fmt.Sprintf(placementv1beta1.FirstWorkNameFmt, testCRPName),
 						Namespace: memberClusterNamespaceName,
-						OwnerReferences: []metav1.OwnerReference{
-							{
-								APIVersion:         placementv1beta1.GroupVersion.String(),
-								Kind:               "ClusterResourceBinding",
-								Name:               binding.Name,
-								UID:                binding.UID,
-								BlockOwnerDeletion: ptr.To(true),
-							},
-						},
 						Labels: map[string]string{
 							placementv1beta1.CRPTrackingLabel:                 testCRPName,
 							placementv1beta1.ParentBindingLabel:               binding.Name,
@@ -429,15 +420,6 @@ var _ = Describe("Test Work Generator Controller", func() {
 						ObjectMeta: metav1.ObjectMeta{
 							Name:      fmt.Sprintf(placementv1beta1.FirstWorkNameFmt, testCRPName),
 							Namespace: memberClusterNamespaceName,
-							OwnerReferences: []metav1.OwnerReference{
-								{
-									APIVersion:         placementv1beta1.GroupVersion.String(),
-									Kind:               "ClusterResourceBinding",
-									Name:               binding.Name,
-									UID:                binding.UID,
-									BlockOwnerDeletion: ptr.To(true),
-								},
-							},
 							Labels: map[string]string{
 								placementv1beta1.CRPTrackingLabel:                 testCRPName,
 								placementv1beta1.ParentBindingLabel:               binding.Name,
@@ -631,15 +613,6 @@ var _ = Describe("Test Work Generator Controller", func() {
 					ObjectMeta: metav1.ObjectMeta{
 						Name:      fmt.Sprintf(placementv1beta1.FirstWorkNameFmt, testCRPName),
 						Namespace: memberClusterNamespaceName,
-						OwnerReferences: []metav1.OwnerReference{
-							{
-								APIVersion:         placementv1beta1.GroupVersion.String(),
-								Kind:               "ClusterResourceBinding",
-								Name:               binding.Name,
-								UID:                binding.UID,
-								BlockOwnerDeletion: ptr.To(true),
-							},
-						},
 						Labels: map[string]string{
 							placementv1beta1.CRPTrackingLabel:                 testCRPName,
 							placementv1beta1.ParentBindingLabel:               binding.Name,
@@ -672,15 +645,6 @@ var _ = Describe("Test Work Generator Controller", func() {
 					ObjectMeta: metav1.ObjectMeta{
 						Name:      envWork.Name,
 						Namespace: memberClusterNamespaceName,
-						OwnerReferences: []metav1.OwnerReference{
-							{
-								APIVersion:         placementv1beta1.GroupVersion.String(),
-								Kind:               "ClusterResourceBinding",
-								Name:               binding.Name,
-								UID:                binding.UID,
-								BlockOwnerDeletion: ptr.To(true),
-							},
-						},
 						Labels: map[string]string{
 							placementv1beta1.CRPTrackingLabel:                 testCRPName,
 							placementv1beta1.ParentBindingLabel:               binding.Name,
@@ -757,15 +721,6 @@ var _ = Describe("Test Work Generator Controller", func() {
 					ObjectMeta: metav1.ObjectMeta{
 						Name:      fmt.Sprintf(placementv1beta1.FirstWorkNameFmt, testCRPName),
 						Namespace: memberClusterNamespaceName,
-						OwnerReferences: []metav1.OwnerReference{
-							{
-								APIVersion:         placementv1beta1.GroupVersion.String(),
-								Kind:               "ClusterResourceBinding",
-								Name:               binding.Name,
-								UID:                binding.UID,
-								BlockOwnerDeletion: ptr.To(true),
-							},
-						},
 						Labels: map[string]string{
 							placementv1beta1.CRPTrackingLabel:                 testCRPName,
 							placementv1beta1.ParentBindingLabel:               binding.Name,
@@ -797,15 +752,6 @@ var _ = Describe("Test Work Generator Controller", func() {
 					ObjectMeta: metav1.ObjectMeta{
 						Name:      work.Name,
 						Namespace: memberClusterNamespaceName,
-						OwnerReferences: []metav1.OwnerReference{
-							{
-								APIVersion:         placementv1beta1.GroupVersion.String(),
-								Kind:               "ClusterResourceBinding",
-								Name:               binding.Name,
-								UID:                binding.UID,
-								BlockOwnerDeletion: ptr.To(true),
-							},
-						},
 						Labels: map[string]string{
 							placementv1beta1.CRPTrackingLabel:                 testCRPName,
 							placementv1beta1.ParentBindingLabel:               binding.Name,
@@ -917,15 +863,6 @@ var _ = Describe("Test Work Generator Controller", func() {
 					ObjectMeta: metav1.ObjectMeta{
 						Name:      fmt.Sprintf(placementv1beta1.FirstWorkNameFmt, testCRPName),
 						Namespace: memberClusterNamespaceName,
-						OwnerReferences: []metav1.OwnerReference{
-							{
-								APIVersion:         placementv1beta1.GroupVersion.String(),
-								Kind:               "ClusterResourceBinding",
-								Name:               binding.Name,
-								UID:                binding.UID,
-								BlockOwnerDeletion: ptr.To(true),
-							},
-						},
 						Labels: map[string]string{
 							placementv1beta1.CRPTrackingLabel:                 testCRPName,
 							placementv1beta1.ParentBindingLabel:               binding.Name,
@@ -957,15 +894,6 @@ var _ = Describe("Test Work Generator Controller", func() {
 					ObjectMeta: metav1.ObjectMeta{
 						Name:      envWork.Name,
 						Namespace: memberClusterNamespaceName,
-						OwnerReferences: []metav1.OwnerReference{
-							{
-								APIVersion:         placementv1beta1.GroupVersion.String(),
-								Kind:               "ClusterResourceBinding",
-								Name:               binding.Name,
-								UID:                binding.UID,
-								BlockOwnerDeletion: ptr.To(true),
-							},
-						},
 						Labels: map[string]string{
 							placementv1beta1.CRPTrackingLabel:                 testCRPName,
 							placementv1beta1.ParentBindingLabel:               binding.Name,
@@ -1116,15 +1044,6 @@ var _ = Describe("Test Work Generator Controller", func() {
 					ObjectMeta: metav1.ObjectMeta{
 						Name:      fmt.Sprintf(placementv1beta1.WorkNameWithSubindexFmt, testCRPName, 1),
 						Namespace: memberClusterNamespaceName,
-						OwnerReferences: []metav1.OwnerReference{
-							{
-								APIVersion:         placementv1beta1.GroupVersion.String(),
-								Kind:               "ClusterResourceBinding",
-								Name:               binding.Name,
-								UID:                binding.UID,
-								BlockOwnerDeletion: ptr.To(true),
-							},
-						},
 						Labels: map[string]string{
 							placementv1beta1.CRPTrackingLabel:                 testCRPName,
 							placementv1beta1.ParentResourceSnapshotIndexLabel: "2",
@@ -1191,15 +1110,6 @@ var _ = Describe("Test Work Generator Controller", func() {
 					ObjectMeta: metav1.ObjectMeta{
 						Name:      fmt.Sprintf(placementv1beta1.WorkNameWithSubindexFmt, testCRPName, 1),
 						Namespace: memberClusterNamespaceName,
-						OwnerReferences: []metav1.OwnerReference{
-							{
-								APIVersion:         placementv1beta1.GroupVersion.String(),
-								Kind:               "ClusterResourceBinding",
-								Name:               binding.Name,
-								UID:                binding.UID,
-								BlockOwnerDeletion: ptr.To(true),
-							},
-						},
 						Labels: map[string]string{
 							placementv1beta1.CRPTrackingLabel:                 testCRPName,
 							placementv1beta1.ParentResourceSnapshotIndexLabel: "2",
@@ -1490,15 +1400,6 @@ var _ = Describe("Test Work Generator Controller", func() {
 					ObjectMeta: metav1.ObjectMeta{
 						Name:      fmt.Sprintf(placementv1beta1.FirstWorkNameFmt, testCRPName),
 						Namespace: memberClusterNamespaceName,
-						OwnerReferences: []metav1.OwnerReference{
-							{
-								APIVersion:         placementv1beta1.GroupVersion.String(),
-								Kind:               "ClusterResourceBinding",
-								Name:               binding.Name,
-								UID:                binding.UID,
-								BlockOwnerDeletion: ptr.To(true),
-							},
-						},
 						Labels: map[string]string{
 							placementv1beta1.CRPTrackingLabel:                 testCRPName,
 							placementv1beta1.ParentBindingLabel:               binding.Name,
@@ -1722,15 +1623,6 @@ var _ = Describe("Test Work Generator Controller", func() {
 					ObjectMeta: metav1.ObjectMeta{
 						Name:      fmt.Sprintf(placementv1beta1.FirstWorkNameFmt, testCRPName),
 						Namespace: memberClusterNamespaceName,
-						OwnerReferences: []metav1.OwnerReference{
-							{
-								APIVersion:         placementv1beta1.GroupVersion.String(),
-								Kind:               "ClusterResourceBinding",
-								Name:               binding.Name,
-								UID:                binding.UID,
-								BlockOwnerDeletion: ptr.To(true),
-							},
-						},
 						Labels: map[string]string{
 							placementv1beta1.CRPTrackingLabel:                 testCRPName,
 							placementv1beta1.ParentBindingLabel:               binding.Name,
